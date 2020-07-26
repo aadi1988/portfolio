@@ -1,0 +1,79 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+header nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+header nav ul li{
+    padding: 20px;
+    
+}
+
+header nav ul li a{
+    color: white;
+}
+
+.hero{
+    background-image: url('../images/Colorful-Plait-Background.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.hero h2{
+    position: absolute;
+    margin-left: 175px;
+    margin-top: 175px;
+}
+
+.about-me{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-me h2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 30%;
+}
+
+.bio{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 70%;
+}
+
+@media screen and (max-width:768px){
+    .about-me h2{
+        width: 100%;
+    }
+
+    .bio{
+        width: 100%;
+    }
+}
