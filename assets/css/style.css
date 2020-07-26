@@ -68,6 +68,10 @@ header nav ul li a{
     padding-left: 30px;
 }
 
+.contact{
+    padding-right: 80px;
+}
+
 .bio-me h2::after{
     content: " ";
     display: flex;
@@ -86,6 +90,25 @@ header nav ul li a{
     margin-left: -70px;
 }
 
+.contact-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-link ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style: none;
+    
+}
+
+.contact-link ul li{
+    padding: 20px;
+}
+
 @media screen and (max-width:768px){
     .bio-me h2{
         width: 70%;
@@ -101,5 +124,14 @@ header nav ul li a{
     .bio{
         width: 100%;
         margin:0 auto;
+    }
+
+    .work, .contact{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact ul{
+        padding-right: 40px;
     }
 }
