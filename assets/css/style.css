@@ -1,8 +1,10 @@
+
+
 header{
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    color: white;
+    background-color: rgb(80,199,199);
+    color:black;
     position: sticky;
     top:0;
     z-index: 9999;
@@ -29,14 +31,14 @@ header nav ul li{
 }
 
 header nav ul li a{
-    color: white;
+    color:black;
 }
 
 .hero{
     background-image: url('../images/Colorful-Plait-Background.jpg');
     background-size: cover;
     background-attachment: fixed;
-    height: 200px;
+    height: 300px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -49,7 +51,7 @@ header nav ul li a{
     position: absolute;
     margin-top: 150px;
     margin-left: 1000px;
-    background-color:rgba(255, 246, 143, 0.75);
+    background-color: rgb(80,199,199,0.75);
     font-size: 30px;
 }
 
@@ -58,14 +60,16 @@ header nav ul li a{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-bottom: 50px;
 }
+
 
 .bio-me h2{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     width:30%;   
-    font-size: 30px;
+    font-size: 35px;
 }    
 
 .work{
@@ -92,6 +96,7 @@ header nav ul li a{
     flex-wrap: wrap;
     width: 70%;
     margin-left: -70px;
+    font-size: 25px;
 }
 
 .contact-link{
@@ -139,7 +144,7 @@ header nav ul li a{
     display: flex;
     align-items: center;
     justify-content: left;
-    
+    position: relative;
     
 }
 
@@ -149,14 +154,35 @@ header nav ul li a{
 }
 
 
-.proj-img > img{
+.proj-img a img{
     max-width: 100%;
     object-fit: cover;
     max-height: 100%;
     display: block;
 }
 
+.info{
+    z-index: 9998;
+    color:black;
+    position: absolute;
+    background-color:rgb(80,199,199,0.75);
+    width: 30%;
+    opacity: 0;
+    transition: ease 0.5s;
+}
+
+.proj-img:hover .info{
+    opacity: 1;
+}
+
+
 @media screen and (max-width:768px){
+    .hero h2{
+        margin-top: 250px;
+        margin-left: 150px;
+         
+    }
+
     .bio-me h2{
         width: 70%;
         border-right: 0;
