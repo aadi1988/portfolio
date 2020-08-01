@@ -1,31 +1,42 @@
+
+/*add background color to the entire document*/
 body{
     background-color: rgba(255,255,255,0.3);
 }
-header{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color:white;
-    position: sticky;
-    top:0;
-    z-index: 9999;
-    font-family: 'Dancing Script', cursive;
-    font-size: x-large;
-}
 
-header nav{
+/*style the header - add background color, font-color, make it sticky, make it responsive*/
+header{
+    padding: 15px 35px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    background-color: black;
+    color:white;
+    position: sticky;
+    position: -webkit-sticky;
+    top:0;
+    z-index: 9999;
+    font-family: 'Dancing Script', cursive;
     
 }
 
+header h1{
+    font-size: 40px;
+}
+
+header nav{
+    
+    margin: 7px 0;
+}
+
+
+/*unordered navigation list*/
 header nav ul{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    list-style: none;
+    list-style: none; /*remove list style*/
 }
 
 header nav ul li{
@@ -35,6 +46,8 @@ header nav ul li{
 
 header nav ul li a{
     color:white;
+    font-size: 1.55vw;
+    padding:10px 15px;
 }
 
 .hero img{
@@ -264,6 +277,31 @@ header nav ul li a{
 }
 
 @media screen and (max-width:980px){
+
+    header{
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+ 
+    header h1{
+        width: 100%;
+        text-align: center;
+        
+        
+    }
+ 
+    header nav ul{
+        margin-top: 20px;
+        width: 100%;
+        
+        
+    }
+ 
+    header nav ul li a{
+        font-size: 20px;
+    }
+
     .info{
         width: 100px;
         height: 50px;
@@ -288,6 +326,9 @@ header nav ul li a{
 }
 
 @media screen and (max-width:768px){
+    .header nav{
+        margin: -10px 0;
+    }
     
     .hero{
         -webkit-background-size: 100%; 
@@ -344,8 +385,8 @@ header nav ul li a{
         -moz-background-size: cover; 
         -o-background-size: cover; 
         background-size: cover;
-        width:99%;
-        height: 400px;
+        width:99.5%;
+        height: 500px;
         
     }
 
@@ -354,6 +395,9 @@ header nav ul li a{
 }
 
 @media screen and (max-width: 575px){
+    .header nav{
+        margin: -20px 0;
+    }
     .hero{
         background-image: none;
 
