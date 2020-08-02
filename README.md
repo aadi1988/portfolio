@@ -1,5 +1,5 @@
-#MY PORTFOLIO
+# MY PORTFOLIO
 
-##Introducing "ME".. includes a short intro, my projects and my contact details.
+## Introducing "ME".. includes a short intro, my projects and my contact details.
 
-###Snapshots of my page
+### Snapshots of my page
