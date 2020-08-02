@@ -7,23 +7,25 @@ body{
 /*style the header - add background color, font-color, make it sticky, make it responsive*/
 header{
     padding: 15px 35px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: flex; /*flexible display used for responsiveness*/
+    justify-content: space-between; /*places contect putting a space in between accoring to widths taken by individual elements*/
+    flex-wrap: wrap;/*wraps elements when the window grows smaller*/
     background-color: black;
     color:white;
-    position: sticky;
+    position: sticky; /*make the header sticky*/
     position: -webkit-sticky;
     top:0;
-    z-index: 9999;
-    font-family: 'Dancing Script', cursive;
+    z-index: 9999; /*highest z index for this to be on top of the stack;*/
+    font-family: 'Dancing Script', cursive; /*using google web font family*/
     
 }
 
+/*set the font size of the main title of the header*/
 header h1{
     font-size: 40px;
 }
 
+/*giving padding between navigation and header title element*/
 header nav{
     
     margin: 7px 0;
@@ -32,42 +34,47 @@ header nav{
 
 /*unordered navigation list*/
 header nav ul{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex;/*flexible display used for responsiveness*/
+    justify-content: space-between;/*places contect putting a space in between accoring to widths taken by individual elements on the x-axis*/
+    align-items: center; /*places elements in the center on the y-axis*/
     flex-wrap: wrap;
     list-style: none; /*remove list style*/
 }
 
+/*give padding between navigation elements*/
 header nav ul li{
     padding: 20px;
     
 }
 
+/*set font color and size and padding on each nav element*/
 header nav ul li a{
     color:white;
-    font-size: 1.55vw;
+    font-size: 1.55vw;/*font size 1.55% of the viewport*/
     padding:10px 15px;
 }
 
+/*only displayed when screen size is less than 580px*/
 .hero img{
     display: none;
 }
 
+/*set the background image and subtitle of the page*/
 .hero{
     background-image: url('../images/my_pic_2.jpg');
-    background-size: cover;
-    background-attachment: fixed;
+    background-size: cover; /*covers the entire parent element this image is placedd in*/
+    background-attachment: fixed; /*to give parrallax effect*/
     background-position: center;
     height: 700px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: flex-end;/*places elements at the end of the x-axis*/
+    align-items: flex-end;/*places elements at the end of the y-axis*/
     
     font-family: 'Dancing Script', cursive;
 }
 
+/*set properties of the subtitle of the hero image*/
 .hero h2{
     
     
@@ -81,57 +88,66 @@ header nav ul li a{
     
 }
 
+/*set properties of the about-me part*/
 .bio-me{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 50px;
+    margin-bottom: 50px; /*give a 50px margin at the bottom of this element*/
 }
 
 
-.bio-me h2{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width:30%;   
-    font-size: 35px;
-    font-family: 'Dancing Script', cursive;
-}    
 
-.work{
-    padding-left: 30px;
-}
-
-.contact{
-    padding-right: 80px;
-}
-
-.bio-me h2::after{
-    content: " ";
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-right: 2px solid black;
-    height: 100px;
-    padding-left: 10px;
-}
-
+/*setting up basic properties to for the headers of about-me, work and contact-me*/
 .bio{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 60%;
-    
+    width: 60%;/*take up 60% of the parent element*/
+    font-family: 'Dancing Script', cursive; 
     font-size: 25px;
 }
+/*set properties of the work part*/
+.work{
+    padding-left: 30px;
+}
 
+/*set properties of the contact-me part*/
+.contact{
+    padding-right: 80px;
+}
+
+
+/*adding vertical border*/
+.bio-me h2::after{
+    content: " ";/*place no content in this element*/
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-right: 2px solid black;/*create a right vertical border*/
+    height: 100px;
+    padding-left: 10px;
+}
+
+/*set properties of the contact-me header*/
+.bio-me h2{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width:30%;   /*take up 30% of the parent element*/
+    font-size: 35px;
+    font-family: 'Dancing Script', cursive;
+}    
+
+/*setting up properties of contact me navigation*/
 .contact-link{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/*unordered list - contact me navigation*/
 .contact-link ul{
     display: flex;
     justify-content: space-between;
@@ -141,38 +157,43 @@ header nav ul li a{
     
 }
 
+/*contact-me list properties*/
 .contact-link ul li{
     padding: 20px;
     font-family: 'Dancing Script', cursive;
-    position: relative;
+    position: relative; /*added as a relative position for the child element(contact-overlay::after) to be placed as absolute*/
 }
 
 
-
+/*set font color of each nav element under contact list*/
 .contact-link ul li a{
-    color: black;
+    color: black; /*font-color is black*/
+    text-decoration: none;
 }
 
+/*created to show up when list element is hovered over*/
 .contact-overlay::after{
     content: "";
     background-color: rgba(0, 0, 0);
-    position: absolute;
+    position: absolute;/*absolute position of this element within it's parent element*/
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    transition: ease-in 0.5s;
+    opacity: 0;/*do not display until the parent element is hovered over*/
+    transition: ease-in 0.5s;/*transition from opacity 0 to 0.4 in 0.5s*/
     pointer-events: none;
 }
 
+/*hover action on the list element*/
 .contact-overlay:hover::after {
-    opacity: 0.4;
+    opacity: 0.4;/*displayed when contact-overlay is hovered over*/
     
 }
 
+/*setting up properties for the entire grid*/
 .service-grid-wrapper{
     display: flex;
     justify-content: center;
@@ -180,15 +201,17 @@ header nav ul li a{
 
 }
 
+/*create grid elements*/
 .service-grid-container{
-    display: grid;
-    grid-template-columns: repeat(3,50fr);
-    grid-template-rows: repeat(3,50fr);
+    display: grid; /*display form is grid*/
+    grid-template-columns: repeat(3,50fr);/*create 3 columns of 50fr each*/
+    grid-template-rows: repeat(3,50fr);/*create 3 rows of 50fr units each*/
     
     
-    grid-gap: 10px;
+    grid-gap: 10px;/*gap between each grid element*/
 }
 
+/*setup properties of each grid element*/
 .service-grid-item{
     
     display: flex;
@@ -199,6 +222,7 @@ header nav ul li a{
     
 }
 
+/*the first grid item is the biggest and spans 2 rows and 2 columns*/
 .first-proj{
     grid-row: 1/span 2;
     grid-column: 1/span 2;
@@ -206,56 +230,55 @@ header nav ul li a{
     
 }
 
+/*set up properties of the first grid item*/
 .first-proj a{
-    background-image: url("../images/IMG_4154.jpg");
+    background-image: url("../images/IMG_4154.jpg"); /*this is for the image to fully fit the grid item*/
     background-size: cover;
-    display: block;
+    display: block;/*this is for the image to fully fit the grid item*/
     width: 100%;
     height: 100%;
 }
 
+/*set up properties of the other grid elements*/
 .proj-img a img{
     max-width: 100%;
     
     max-height: 100%;
-    display: block;
-    
-  
+    display: block;  
 }
 
+/*set up properties of the container of each title and subtitle for the project*/
 .info{
-    z-index: 9998;
+    z-index: 9998;/*to be able to display this element on top of the image*/
     color:black;
     position: absolute;
     background-color: white;
     width: 150px;
-    border:1px solid black;
-    
-    opacity: 1;
-    transition: ease 0.5s;
+    border:1px solid black; 
     height: 80px;
     display: flex;
-    
     flex-wrap: wrap;
     font-family: 'Dancing Script', cursive;
 }
 
+/*set up properties of each title and subtitle for the project*/
 .info h3,p{
     display: flex;
     flex: wrap;
     width: 100%;
 }
-
+/*move the project header a little towards the top of the container*/
 .info h3{
     margin-top: -0.5px;
     
 }
-
+/*move the project subtitle a little towards the top of the container*/
 .info p{
     margin-top: -30px;
     margin-bottom: 2px;
 }
 
+/*pseudo element to add overlay effect on hovering over the project*/
 .proj-img::after{
     content: "";
     background-color: rgba(255, 236, 139);
@@ -266,24 +289,26 @@ header nav ul li a{
     right: 0;
     height: 100%;
     width: 100%;
-    display: none;
+    display: none; /*add this element only when hovering over the parent element*/
     transition: ease-in 0.1s;
-    pointer-events: none;
+    pointer-events: none; /*ignore this element for the hover action*/
 }
 
+/*display the overlay when hovering over the parent element*/
 .proj-img:hover::after {
     display: block;
     opacity: 0.3;
 }
 
+/*these properties are applied only when the screen size is lesser that 980px*/
 @media screen and (max-width:980px){
-
+    
     header{
         padding-bottom: 0;
         justify-content: center;
         position: relative;
     }
- 
+    /*make the header and nav elements go into two separate lines*/
     header h1{
         width: 100%;
         text-align: center;
@@ -293,43 +318,40 @@ header nav ul li a{
  
     header nav ul{
         margin-top: 20px;
-        width: 100%;
+        width: 100%; 
         
         
     }
  
+    /*change font-size when screen is smaller*/
     header nav ul li a{
         font-size: 20px;
     }
-
+    /*change size of the conatiner of project title and subtitle when screensize is smaller*/
     .info{
         width: 100px;
         height: 50px;
         
     }
 
+    /*change title font size when screen size is smaller*/
     .info h3{
         font-size: 25px;
     }
+    /*change subtitle font size when screen size is smaller*/
     .info p{
         font-size: 20px;
     }
-
-    .contact ul li{
-        flex: 0 100%;
-        margin-left:90px;
-    }
-
-    .contact ul{
-        padding-right: 40px;
-    }
+    /*each of the contact info nav elements go into a separate line*/
+    
 }
-
+/*these properties are applied only when the screen size is lesser that 768px*/
 @media screen and (max-width:768px){
+    /*move the nav part of header slightly upwards as the screen grows smaller*/
     .header nav{
         margin: -10px 0;
     }
-    
+    /*adjust hero image as screen size reduces*/
     .hero{
         -webkit-background-size: 100%; 
         -moz-background-size: 100%; 
@@ -340,23 +362,27 @@ header nav ul li a{
         -o-background-size: cover; 
         background-size: cover;
     }
+
+    /*adjust hero header as screen size reduces*/
     .hero h2{
         margin-top: 250px;
         margin-left: 150px;
          
     }
 
+     /*remove border on the right and and give a bottom border as grid elements go one below the other*/
     .bio-me h2{
         width: 70%;
         border-right: 0;
         border-bottom: 2px solid black;
         
     }
-
+    /*remove flexible display for contact me header so that nav elemants go one below the other*/
     .bio-me h2::after{
         display: none;
     }
 
+    /*place the headers for about-me, work and contact-me in the center*/
     .bio{
         width: 100%;
         margin:0 auto;
@@ -366,17 +392,17 @@ header nav ul li a{
         padding-left: 0;
         padding-right: 0;
     }
-
+    /*all the projects go one below the other when screen size reduces*/
     .service-grid-container{
         
         grid-template-columns: repeat(1,50fr);
         grid-template-rows: repeat(1,50fr);
         
     }
-
+    /*since properties were different for the first proj, set properties when screen size reduces accordingly*/
     .first-proj{
-        grid-row: 1/span 1;
-        grid-column: 1/span 1;
+        grid-row: 1/span 1; /*change the property of first project to span only one row*/ 
+        grid-column: 1/span 1;/*change the property of first project to span only one column*/ 
         -webkit-background-size: 100%; 
         -moz-background-size: 100%; 
         -o-background-size: 100%; 
@@ -385,7 +411,7 @@ header nav ul li a{
         -moz-background-size: cover; 
         -o-background-size: cover; 
         background-size: cover;
-        width:99.5%;
+        width:99.5%; /*adjust background size according to screen size*/
         height: 500px;
         
     }
@@ -393,22 +419,24 @@ header nav ul li a{
     
     
 }
-
+/*these properties are applied only when the screen size is lesser that 575px*/
 @media screen and (max-width: 575px){
+    /*move nav elements in header slightly upwards when screen size reduces further*/
     .header nav{
         margin: -20px 0;
     }
+    /*remove background image*/
     .hero{
         background-image: none;
 
     }
-
+    /*add a fixed width image referenced in html instead*/
     .hero img{
         width: 100%;
         height: 100%;
         display: block;
     }
-
+    /*adjust the hero header accordingly as background image is removed*/
     .hero h2{
         margin-top: -70px;
     }

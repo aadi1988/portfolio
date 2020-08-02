@@ -5,47 +5,68 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="stylesheet" href="assets/css/style.css"/>  
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>My Portfolio</title>
     </head>
     <body>
         <header>
+            <!--header of thee page-->
             <h1> Aaditi Pai</h1>
+             <!--navigation-->
             <nav>
+                 <!--Unordered list element-->
                 <ul>
+                    <!--List item element-->
                     <li>
+                        <!--Anchor element for about-me-->
                         <a href="#about-me">About Me</a>
                     </li>
                     <li>
+                        <!--Anchor element for work-->
                         <a href="#work">Work</a>
                     </li>
                     <li>
+                        <!--Anchor element for contact-me-->
                         <a href="#contact-me">Contact Me</a>
                     </li>
                     <li>
+                        <!--Anchor element for resume-->
                         <a href="#">Resume</a>
                     </li>
                 </ul>
             </nav>
         </header>
+        <!--main part of the document-->
         <main>
+            <!--hero section(my pic added as background)-->
             <div class="hero">
-                <img src="assets/images/my_pic_2.jpg" alt=""/>
+                <!--this image is only displayed for screens smaller than 580px-->
+                <img src="assets/images/my_pic_2.jpg" alt="black and white picture of me smiling"/>
+                <!--subtitle-->
                 <h2>Software Engineer -Coding for fun!!</h2>
             </div>
+            <!--about me-->
             <article id="about-me" class="bio-me">
+                <!--header for this section-->
                 <h2>About
                      Me</h2>
-                
+                <!--short intro to myself-->
                 <p class="bio">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                    I am a software engineer currently working at Cisco. I test various protocols like BGP that drive the internet on routers and switches.
+                    Safe to say I connect people &#128540;! I like learning new things and keeping myself updated on new technologies.I love reading books and watching tv shows and movies.
+                    I take any opportunity I get to give back too. Taking part in volunteering activities is one my favorite things to do! Hope to see you guys on the other side.!!
                 </p>
             </article>
+            <!--my projects-->
             <article id="work" class="bio-me work">
+                <!--header-->
                 <h2>Work</h2>
-                
+                <!--links to my projects-->
                 <div class="bio">
+                    <!--grid of images-->
                     <div class="service-grid-wrapper">
                         <div class="service-grid-container">
+                            <!--each grid cell(first project)-->
                             <div class="service-grid-item first-proj proj-img">
                                 
                                    <a href="#"></a>
@@ -58,29 +79,33 @@
                                    </div>
                                 
                             </div>
+                            <!--second project-->
                             <div class="service-grid-item proj-img">
-                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt=""/></a>
+                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt="link to second project"/></a>
                                 <div class="info"> 
                                     <h3>Project2</h3>
                                     <p>subtitle</p>
                                 </div>
                             </div>
+                            <!--third project-->
                             <div class="service-grid-item proj-img">
-                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt=""/></a>
+                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt="link to third project"/></a>
                                 <div class="info">
                                     <h3>Project3</h3>
                                     <p>subtitle</p>
                                 </div>
                             </div>
+                            <!--fourth project-->
                             <div class="service-grid-item proj-img">
-                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt=""/></a>
+                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt="link to fourth project"/></a>
                                 <div class="info">
                                     <h3>Project4</h3>
                                     <p>subtitle</p>
                                 </div>
                             </div>
+                            <!--fifth project-->
                             <div class="service-grid-item proj-img">
-                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt=""/></a>
+                                <a href="#"><img src="assets/images/IMG_4154.jpg" alt="link to fifth project"/></a>
                                 <div class="info">
                                     <h3>Project5</h3>
                                     <p>subtitle</p>
@@ -90,29 +115,53 @@
                     </div>
                 </div>
             </article>
+            <!--contact me-->
             <article id="contact-me" class="bio-me contact">
+                <!--header-->
                 <h2>Contact 
                     Me</h2>
-                
-                <div class="bio contact-link">
+                <!--details to contact me-->
+                <address class="bio contact-link">
                     <ul>
                       <li class="contact-overlay">
-                           <a href="#">2133087411</a>
+                           <!--phone number-->
+                            <a href="#" aria-label="Call me at 2133087411">
+                              <i class="fa fa-phone" aria-hidden="true"></i>
+                            </a>
                       </li>
                       <li class="contact-overlay">
-                           <a href="#">aaditigp@usc.edu</a>
+                           <!--email id-->
+                           <a href="mailto:aaditigp@usc.edu" aria-label="Email me">
+                              <i class="fa fa-envelope" aria-hidden="true"></i>
+                           </a>
                       </li>
                       <li class="contact-overlay">
-                           <a href="#">GitHub</a>
+                           <!--github link-->
+                           <a href="https://github.com/aadi1988/" aria-label="Check out my github repos">
+                              <i class="fa fa-github" aria-hidden="true"></i>
+                           </a>
                       </li>
                       <li class="contact-overlay">
-                           <a href="#">Twitter</a>
+                           <!--Twitter link-->
+                           <a href="#" aria-label="follow me on Twitter">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                           </a>
                       </li>
                       <li class="contact-overlay">
-                           <a href="#">Spotify</a>
+                           <!--spotify link-->
+                           <a href="#" aria-label="folow my spotify music">
+                            <i class="fa fa-spotify" aria-hidden="true"></i>
+                           </a> 
+                           
+                      </li>
+                      <li class="contact-overlay">
+                          <!--linkedin-->
+                          <a href="#" aria-label="follow me on linkedIn">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                         </a>
                       </li>
                     </ul>
-                </div>
+                </address>
             </article>
         </main>
     </body>
