@@ -11,3 +11,7 @@
 ![Intro to me and links to my projects](assets/images/pic_2.png)
 #### links to more projects and my contact details. You can contact me at aaditigp@usc.edu.
 ![links to more projects and my contact details](assets/images/pic_3.png)
+
+#### Link to my webpage
+
+#####  https://aadi1988.github.io/portfolio/ 
