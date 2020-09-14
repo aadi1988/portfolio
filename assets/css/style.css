@@ -232,7 +232,7 @@ header nav ul li a{
 
 /*set up properties of the first grid item*/
 .first-proj a{
-    background-image: url("../images/IMG_4154.jpg"); /*this is for the image to fully fit the grid item*/
+    background-image: url("../images/Common-capitalism.png"); /*this is for the image to fully fit the grid item*/
     background-size: cover;
     display: block;/*this is for the image to fully fit the grid item*/
     width: 100%;
